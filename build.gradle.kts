@@ -5,6 +5,7 @@ plugins {
     java
     id("com.github.johnrengelman.shadow") version ("7.1.2")
     kotlin("jvm") version "1.8.0"
+    id("io.papermc.paperweight.userdev") version "1.5.3"
     id("org.jetbrains.kotlin.plugin.lombok") version "1.8.0"
 }
 
@@ -30,7 +31,7 @@ dependencies {
 //    implementation ("com.j256.ormlite:ormlite-jdbc:6.1")
 //    implementation ("com.zaxxer:HikariCP:4.0.3")
     compileOnly(fileTree("libs"))
-    compileOnly("org.spigotmc:spigot-api:1.19.4-R0.1-SNAPSHOT")
+    paperDevBundle("1.18.2-R0.1-SNAPSHOT")
 //    compileOnly ("com.mojang:authlib:1.5.21")
 }
 
