@@ -23,8 +23,8 @@ repositories {
 }
 
 dependencies {
-    implementation("com.xbaimiao:EasyLib:1.9.5:all")
-    compileOnly("com.xbaimiao:EasyLib:1.9.5:sources")
+    implementation("com.xbaimiao:EasyLib:1.9.8:all")
+    compileOnly("com.xbaimiao:EasyLib:1.9.8:sources")
     implementation(kotlin("stdlib-jdk8"))
 //    implementation ("de.tr7zw:item-nbt-api:2.11.2")
 //    implementation ("com.j256.ormlite:ormlite-core:6.1")
@@ -77,6 +77,9 @@ tasks {
         kotlinOptions {
             jvmTarget = "1.8"
         }
+    }
+    assemble{
+        dependsOn(reobfJar)
     }
     shadowJar {
         val relocateFile = File("relocate.properties")
